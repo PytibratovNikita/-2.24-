@@ -1,7 +1,17 @@
-# вар 2.24
-Из трехзначного числа x вычли его последнюю цифру. Когда результат разделили на 10, а к частному слева приписали последнюю цифру числаx, то получилось число 237. Найти число x. 
-Оператор break используется для завершения циклического процесса (прерывание работы цикла).
-Вывод: x=372
-![image](https://user-images.githubusercontent.com/113889243/196457073-bec2cff7-78a2-40f6-aa93-be4a1d838cb2.png)
-![image](https://user-images.githubusercontent.com/113889243/196457374-56aa2c98-96bb-49a1-bc03-4966a4306c9e.png)
-
+using System;
+ 
+class Program
+{
+    static void Main()
+    {
+        for (int i = 100; i < 999; i++)
+        {
+            if ((i % 10).ToString() + ((i - i % 10) / 10).ToString() == "237")
+            {
+                Console.WriteLine(i);
+                break;
+            }
+        }
+        Console.ReadKey();
+    }
+}
